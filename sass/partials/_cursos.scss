@@ -1,0 +1,30 @@
+//cursos
+
+.container-cursos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    .product{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      
+      p{
+        text-transform: uppercase;
+        font-family: $textFont;
+        font-size: medium;
+      }
+      img {
+        max-width: 80%;
+        padding: 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 780px){
+    .container-cursos{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }

@@ -1,0 +1,133 @@
+//index
+
+.navbar {
+    .logo {
+        width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 30px;
+    }
+  }
+
+  .welcome {
+    background-color:$bgColor ;
+    display: flex;
+    padding: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      &-title {
+        width: 60%;
+        text-align: center;
+        h1{
+          text-transform: uppercase ;
+          font-family: $tituloFont;
+        }
+      }
+      &-btn {
+        min-width: 30% ;
+        width: 40%;
+      }
+  }
+
+  .bg-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+     img {
+      display: flex;
+      max-width: 100%;
+      height: fit-content;
+      opacity: 0.69;
+     }
+  }
+
+  @media (min-width: 780px) {
+
+      .bg-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    }
+  }
+
+  /*formulario*/
+
+.bienvenido-form {
+  margin: 0 auto;
+  padding:20px;
+  padding-bottom: 20px;
+  background-color: $bgColor;
+
+      h1 {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: 36px;
+        font-family: $tituloFont;
+      }
+      p {
+        font-size: 18px;
+        width: 40%;
+        font-family: $textFont;
+        margin: auto;
+        text-align: center;
+      }
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 100px;
+  width: 50%;
+  padding: 30px;
+
+    &-elements {
+      width: 80%;
+      border: 2px solid black;
+    }
+
+    &-elements::placeholder {
+      padding: 10px;
+    }
+
+    &-elements-txt {
+      padding: 10px;
+      font-family: $textFont;
+      font-size: larger;
+    }
+    
+    &-body{
+      display:flex;
+      flex-direction: column;
+      margin: 10px 20px ;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      }
+  
+    .btn {
+      width: 35%;
+      background-color: white;
+      margin-top: 10px;
+      border: black 2px solid;
+      padding: 3px;
+    }
+  }
+    @media (max-width:700px) {
+      .formulario {
+        width: 100%;
+      }
+        .bienvenido-form{
+         p {
+          width: 70%;
+          font-size: 14px;
+        }
+        h1 {
+          font-size: 26px;
+        }
+      }
+    }
+  

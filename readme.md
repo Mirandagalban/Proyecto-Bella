@@ -1,0 +1,1 @@
+Proyecto para Bella Insumos, un centro de estetica que imparte cursos de cosmetica y tambien provee insumos. Este proyecto es realizado en la cursada de Javascript de CoderHouse.
