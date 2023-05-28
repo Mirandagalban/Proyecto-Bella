@@ -32,13 +32,23 @@ let corporales = cursos.filter ((el)=> el.tipo.includes ("corporal"));
 console.log(faciales);
 console.log (corporales);
 
-let precioCard= cursos.map ((el)=>(el.precio));
-let precioCash = cursos.map ((el) => (el.precio - (el.precio *10 )/100));
+let precioCard= cursos.map ((el)=>(el.nombre + el.precio));
+let precioCash = cursos.map ((el) => (el.nombre + (el.precio - (el.precio *10 )/100)));
 
 console.log (precioCash)
 console.log (precioCard)
 
+let listaPrecio= parseFloat(prompt ("¿Desea ver la lista de precios en efectivo (1) o tarjeta (2)?"));
 
+if (listaPrecio == 1) {
+    alert("La lista de precios en efectivo es: " +precioCash)
+}
+else if (listaPrecio== 2) {
+    alert("La lista de precios en tarjeta es: " +precioCard)
+}
+else {
+    alert("opcion incorrecta")
+}
 /*const listaAlumnos = [];
 let cantidad = 6;
 
