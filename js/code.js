@@ -1,4 +1,4 @@
-alert("Bienvenido a Bella insumos :)")
+/*alert("Bienvenido a Bella insumos :)")
 let usuario = prompt("¿cual es tu nombre?");
 alert ("Bienvenido "+ usuario);
 
@@ -81,4 +81,6 @@ switch (producto){
     }
     else {
         console.log("el total de tu compra es de " + precioTotal)
-    }
+    }*/
+
+    

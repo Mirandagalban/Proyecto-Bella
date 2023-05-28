@@ -15,7 +15,20 @@ a:hover {
   text-decoration: none;
 }
 
-.navbar .logo {
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffe5ec;
+  opacity: 0.7;
+  margin: auto;
+}
+.header-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -191,10 +204,42 @@ a:hover {
   font-size: large;
 }
 
+.insumos-bg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.insumos-bg img {
+  display: flex;
+  max-width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  opacity: 0.69;
+}
+
+.insumos {
+  background-color: #ffe5ec;
+  text-align: center;
+  padding: 30px;
+}
+.insumos-title {
+  font-family: serif;
+  font-size: x-large;
+  text-align: center;
+  text-transform: uppercase;
+}
+.insumos-title-txt {
+  font-family: system-ui;
+  font-size: medium;
+}
+
 @media (min-width: 780px) {
+  .insumos-bg {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   .container-img {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
+    margin: 0 40px;
   }
 }
 .pie-pagina {

@@ -1,7 +1,20 @@
 //index
 
-.navbar {
-    .logo {
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: $bgColor;
+  opacity: 0.70;
+  margin: auto;
+
+    &-user {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+.logo {
         width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -9,7 +22,6 @@
   flex-direction: row;
   margin: 0 30px;
     }
-  }
 
   .welcome {
     background-color:$bgColor ;
