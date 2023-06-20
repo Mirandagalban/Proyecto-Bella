@@ -10,18 +10,24 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
-      
-      p{
-        text-transform: uppercase;
-        font-family: $textFont;
-        font-size: medium;
-      }
-      img {
+      .curso-img {
         max-width: 80%;
         padding: 1rem;
       }
-    }
-  }
+
+        .curso-content {
+                p{
+                  text-transform: uppercase;
+                  font-family: $textFont;
+                  font-size: medium;
+                }
+                .container-btn {
+                  padding: 2px;
+                  margin: 2px;
+                }
+             }
+        }
+  }     
 
   @media (min-width: 780px){
     .container-cursos{

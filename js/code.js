@@ -82,5 +82,18 @@ switch (producto){
     else {
         console.log("el total de tu compra es de " + precioTotal)
     }*/
-
+    const mostrarDescuento = (() => { 
+    let descuento = document.getElementById ("cupon");
+    let codigoDescuento = document.createElement ("div");
+    codigoDescuento.setAttribute("class", "codigo-descuento");
+    codigoDescuento.innerHTML = `<h4>Ganaste!</h4>
+                                <h6>Usa tu 5% en tu proxima compra mayor $10000</h6>
+                                <p>CODIGO UNICO: BELLA20235% </p>
+                                <p><small>Valido para un uso único, luego de 2 meses de su creación.</small></p>`
     
+        descuento.appendChild(codigoDescuento);
+    });
+
+    const botonDescuento = document.getElementById ("btn-descuento")
+    botonDescuento.addEventListener("click", mostrarDescuento)
+   

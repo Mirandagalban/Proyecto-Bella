@@ -42,6 +42,12 @@
         min-width: 30% ;
         width: 40%;
       }
+      &-cupon {
+        display: flex;
+        border: 3px solid;
+        text-align: center;
+        
+      }
   }
 
   .bg-index {
@@ -62,6 +68,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr  ;
     }
   }
+
+  /*descuento*/
+
+ 
 
   /*formulario*/
 
