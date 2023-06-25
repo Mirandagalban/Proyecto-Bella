@@ -82,18 +82,32 @@ switch (producto){
     else {
         console.log("el total de tu compra es de " + precioTotal)
     }*/
+    const botonDescuento = document.getElementById ("btn-descuento");
+    const descuento = document.getElementById ("cupon");
+
     const mostrarDescuento = (() => { 
-    let descuento = document.getElementById ("cupon");
     let codigoDescuento = document.createElement ("div");
+
+    if (botonDescuento.classList.contains("desactivado")){
     codigoDescuento.setAttribute("class", "codigo-descuento");
     codigoDescuento.innerHTML = `<h4>Ganaste!</h4>
                                 <h6>Usa tu 5% en tu proxima compra mayor $10000</h6>
                                 <p>CODIGO UNICO: BELLA20235% </p>
                                 <p><small>Valido para un uso único, luego de 2 meses de su creación.</small></p>`
-    
-        descuento.appendChild(codigoDescuento);
-    });
+     descuento.style.textAlign= "center";
+     descuento.style.margin= "2px"
+     descuento.appendChild(codigoDescuento);
+     botonDescuento.classList.replace("desactivado","activado");
+     botonDescuento.innerText= "Cerrar"
+    }
 
-    const botonDescuento = document.getElementById ("btn-descuento")
-    botonDescuento.addEventListener("click", mostrarDescuento)
+    else{
+        descuento.removeChild(document.querySelector(".codigo-descuento"));
+        botonDescuento.classList.replace("activado","desactivado");
+        botonDescuento.innerText= "Quiero mi codigo"
+    }
+        });
+
+    botonDescuento.addEventListener("click", mostrarDescuento);
+
    

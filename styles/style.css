@@ -70,12 +70,19 @@ a:hover {
   opacity: 0.69;
 }
 
+.btn-descuento {width: 250px; 
+  padding: 4px 6px; 
+  font-weight: bold; 
+  border-radius: 5px;}
+
 @media (min-width: 780px) {
   .bg-index {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+
 /*formulario*/
 .bienvenido-form {
   margin: 0 auto;
@@ -314,4 +321,4 @@ a:hover {
     flex-direction: column;
     text-align: center;
   }
-}/*# sourceMappingURL=main.css.map */
+}
