@@ -32,7 +32,7 @@ const mostrarCursos = (cursos)=> {
                                         <h3>${curso.nombre} </h3>
                                         <p> Precio: $ ${curso.precio} </p>
                                         <p> Duración: ${curso.duracion} </p>
-                                        <input type="button" value="agregar" id= "boton${curso.id}" class="container-btn">
+                                        <button id= "boton${curso.id}" class="container-btn"> agregar </button>
                                     </div>`;
     containerCursos[0].appendChild(containerCursosGrid)
 });             
@@ -41,6 +41,3 @@ const mostrarCursos = (cursos)=> {
 mostrarCursos(cursos);
 
 const agregarCarrito= document.getElementsByClassName("container-btn")
-for( let btnAgregar of agregarCarrito){
-    btnAgregar.addEventListener("click", () => console.log("se ha agregado al carrito"))
-}

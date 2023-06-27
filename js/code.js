@@ -1,4 +1,5 @@
-/*alert("Bienvenido a Bella insumos :)")
+/* Primeras entregas
+alert("Bienvenido a Bella insumos :)")
 let usuario = prompt("¿cual es tu nombre?");
 alert ("Bienvenido "+ usuario);
 
@@ -82,6 +83,7 @@ switch (producto){
     else {
         console.log("el total de tu compra es de " + precioTotal)
     }*/
+    //cupon decuento 
     const botonDescuento = document.getElementById ("btn-descuento");
     const descuento = document.getElementById ("cupon");
 
@@ -110,4 +112,45 @@ switch (producto){
 
     botonDescuento.addEventListener("click", mostrarDescuento);
 
-   
+// formulario
+class Alumno {
+    constructor (nombre,apellido,email,curso) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email= email;
+        this.curso = curso
+    }
+}
+//declaro array
+    let alumnos = [];
+
+// logica para inicialiar 
+if (localStorage.getItem("alumnos")){
+    alumnos = JSON.parse(localStorage.getItem("alumnos"))
+    console.log (alumnos)
+} else {
+    console.log ("Bienvenido nuevo/a alumno")
+    alumnos.push(new Alumno ("Miranda", "Galban", "mirandagalbanbjj@gmail.com", "Maderoterapia"))
+    localStorage.setItem("alumnos", JSON.stringify(alumnos))
+}
+
+console.log (alumnos)
+
+ function guardarAlumnos(){
+    let nombre= document.getElementById("nombre");
+    let apellido= document.getElementById("apellido");
+    let email= document.getElementById("email");
+    let curso= document.getElementById("curso");
+    let alumnoCreado = new Alumno (nombre.value, apellido.value,email.value, curso.value )
+    console.log(alumnoCreado)
+
+    alumnos.push (alumnoCreado)
+
+//storage
+localStorage.setItem("alumnos", JSON.stringify(alumnos))
+};
+
+const btnResgistro = document.querySelector (".btn-registro")
+
+btnResgistro.addEventListener("click", guardarAlumnos)
+

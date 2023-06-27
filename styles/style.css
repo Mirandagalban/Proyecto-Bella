@@ -70,7 +70,8 @@ a:hover {
   opacity: 0.69;
 }
 
-.btn-descuento {width: 250px; 
+.btn-descuento {
+  width: 250px; 
   padding: 4px 6px; 
   font-weight: bold; 
   border-radius: 5px;}
@@ -321,4 +322,24 @@ a:hover {
     flex-direction: column;
     text-align: center;
   }
+}
+
+/*button*/
+
+.container-btn {
+  border: black 2px solid;
+  padding: 3px 5px;
+  font-weight: bold;
+  font-family: system-ui;
+  opacity: 0.8;
+  border-radius: 8px;
+}
+.container-btn:hover {
+  opacity: 1;;
+}
+
+/*cart*/
+
+.cart-icon {
+ padding: 10px 25px;
 }
