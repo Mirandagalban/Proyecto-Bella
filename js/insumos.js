@@ -1,6 +1,6 @@
 //declaro array
-const carrito = [];
-const productos = [];
+let productosEnCarrito = [];
+let productos = [];
 
 class Producto {
     constructor(id,nombre,precio,cantidad ){
@@ -28,8 +28,6 @@ productos.push (new Producto (12,"Masajeador corporal", 14000, 2));
 productos.push (new Producto (13,"Esmalte regular", 1100, 12));
 productos.push (new Producto (14,"Crema fria", 3600, 8));
 productos.push (new Producto (15,"Aceite corporal", 5400, 7));
-
-
 
 //logica para inicializar carrito
 
@@ -66,32 +64,31 @@ btnAgregar.addEventListener("click", ()=> agregarAlCarrito(producto))
     }
 
     mostrarFaciales(productos)
-    
-
+ 
 //codigo btnAgregar
 
 function agregarAlCarrito (producto){
     console.log (`El producto ${producto.nombre} ha sido agregado al carrito`)
-    carrito.push (producto)
-    console.log (carrito)
+    productosEnCarrito.push (producto)
+    console.log (productosEnCarrito)
 //cargar al storage
-localStorage.setItem("carrito", JSON.stringify(carrito))
+localStorage.setItem("carrito", JSON.stringify(productosEnCarrito))
 }
 
 //cargar prod al carrito
-const productosCarrito = document.getElementById("modal-body");
-const botonCarrito = document.getElementById ("btn-carrito")
+let modalBody = document.getElementById("modal-body");
+let botonCarrito = document.getElementById ("btn-carrito")
 
-botonCarrito.addEventListener ("click", ()=> {cargarProductosAlCarrito(carrito)})
+botonCarrito.addEventListener ("click", ()=> {cargarProductosAlCarrito(productosEnCarrito)})
 
 //funcion para agregar al carrito
 
-function cargarProductosAlCarrito (productosEnCarrito){
-    productosCarrito.innerHTML = ""
+function cargarProductosAlCarrito (storage){
+    modalBody.innerHTML = ""
 
-    productosEnCarrito.forEach((item) => {
-        productosCarrito.innerHTML = `<div class="card mb-3" style="max-width: 540px;" id = "producto ${item.id}>
-        <div class="row g-0">
+    storage.forEach((item) => {
+        modalBody.innerHTML += `<div class="card mb-3" style="max-width: 540px;" id = "producto ${item.id}>
+        <div class="row g-0" id= "item-modal">
           <div class="col-md-4">
             <img src="../multimedia/prod1.jpg" class="img-fluid rounded-start" alt="${item.nombre}">
           </div>
@@ -101,9 +98,25 @@ function cargarProductosAlCarrito (productosEnCarrito){
               <p> Precio: $ ${item.precio}
             </div>
           </div>
-          <button> Eliminar </button>
+          <button class= "btn-eliminar" > Eliminar </button>
         </div>
       </div>`
  
-    }
-)} 
+    })
+//function del total
+ // totalCompra(storage)
+} 
+
+// let acumulador;
+
+// function totalCompra(total){
+//   acumulador = 0;
+//   //recorremos el total
+//   total.forEach((item)=>{
+//   acumulador += item.precio
+//   })
+//   console.log(totalCompra)
+//   if(total==0){
+//     <p>No hay productos en el carrito</p>
+//   }
+// }

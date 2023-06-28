@@ -343,3 +343,28 @@ a:hover {
 .cart-icon {
  padding: 10px 25px;
 }
+
+/*carrito*/
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn-eliminar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: black 2px solid;
+  padding: 3px 5px;
+  font-weight: bold;
+  font-family: system-ui;
+  opacity: 0.8;
+  border-radius: 8px;
+}
+#item-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
