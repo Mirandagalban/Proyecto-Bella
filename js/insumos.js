@@ -1,18 +1,17 @@
+//declaro array
+const carrito = [];
+const productos = [];
+
 class Producto {
-    constructor(id,nombre, precio,disponible, cantidad ){
+    constructor(id,nombre,precio,cantidad ){
         this.id=id;
         this.nombre = nombre;
         this.precio= precio;
         this.cantidad=cantidad;
         };
-       restaCantidad(){
-        this.cantidad=this.cantidad - 1;
+       }
     
-       };
-       
-    }
 
-const productos = [];
 productos.push (new Producto (0,"Serum para ojos", 12000, 12));
 productos.push (new Producto (1,"Crema facial", 8000,8));
 productos.push (new Producto (2,"Gel de limpieza", 4500, 2));
@@ -31,8 +30,6 @@ productos.push (new Producto (14,"Crema fria", 3600, 8));
 productos.push (new Producto (15,"Aceite corporal", 5400, 7));
 
 
-//declaro array
-const carrito = [];
 
 //logica para inicializar carrito
 
@@ -78,7 +75,35 @@ function agregarAlCarrito (producto){
     carrito.push (producto)
     console.log (carrito)
 //cargar al storage
-    localStorage.setItem("carrito", JSON.stringify(carrito))
+localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
+//cargar prod al carrito
+const productosCarrito = document.getElementById("modal-body");
+const botonCarrito = document.getElementById ("btn-carrito")
+
+botonCarrito.addEventListener ("click", ()=> {cargarProductosAlCarrito(carrito)})
+
+//funcion para agregar al carrito
+
+function cargarProductosAlCarrito (productosEnCarrito){
+    productosCarrito.innerHTML = ""
+
+    productosEnCarrito.forEach((item) => {
+        productosCarrito.innerHTML = `<div class="card mb-3" style="max-width: 540px;" id = "producto ${item.id}>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../multimedia/prod1.jpg" class="img-fluid rounded-start" alt="${item.nombre}">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${item.nombre}</h5>
+              <p> Precio: $ ${item.precio}
+            </div>
+          </div>
+          <button> Eliminar </button>
+        </div>
+      </div>`
  
+    }
+)} 
