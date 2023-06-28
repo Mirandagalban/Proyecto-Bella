@@ -19,6 +19,12 @@ cursos.push(new Curso (4,"../multimedia/curso4.jpg","Mini HIFU", 17000, "5 seman
 cursos.push(new Curso (5,"../multimedia/curso5.jpg","Depilación Láser", 15000, "4 semanas","corporal y facial"));
 cursos.push(new Curso (6, "../multimedia/curso6.jpg","Maderoterapia", 12000, "4 semanas","corporal"));
 
+//iniciamos carrito
+if( localStorage.getItem("carrito")) {
+    productosEnCarrito = JSON.parse(localStorage.getItem("carrito"))  
+ } else {
+    localStorage.setItem("carrito", [])
+ }
 
 //plantillas 
 
@@ -32,12 +38,17 @@ const mostrarCursos = (cursos)=> {
                                         <h3>${curso.nombre} </h3>
                                         <p> Precio: $ ${curso.precio} </p>
                                         <p> Duración: ${curso.duracion} </p>
-                                        <button id= "boton${curso.id}" class="container-btn"> agregar </button>
+                                        <button id= "botonCurso${curso.id}" class="container-btn"> agregar </button>
                                     </div>`;
-    containerCursos[0].appendChild(containerCursosGrid)
-});             
+    containerCursos[0].appendChild(containerCursosGrid);
+
+    let btnAgregar= document.getElementById(`botonCurso${curso.id}`);
+    btnAgregar.addEventListener("click", ()=> agregarAlCarrito(curso))
+
+})
     };
 
 mostrarCursos(cursos);
 
-const agregarCarrito= document.getElementsByClassName("container-btn")
+//botonCarrito.addEventListener ("click", ()=> {cargarProductosAlCarrito(productosEnCarrito)})
+

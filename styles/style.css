@@ -368,3 +368,13 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+
+.pocasUnidades {
+  text-transform: uppercase;
+  color: blueviolet;
+  font-weight: bold;
+}
+
+.muchasUnidades {
+  display: none;
+}
