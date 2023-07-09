@@ -1,0 +1,130 @@
+[
+    {
+        "id":"0",
+        "nombre":"Serum para ojos",
+        "precio":12000,
+        "cantidad":12,
+        "imagen":"prod0.jpg"
+    },
+    {
+        "id":1,
+        "nombre":"Crema Facial",
+        "precio":8000,
+        "cantidad":5,
+        "imagen":"prod1.jpg"
+
+    },
+    {
+        "id":2,
+        "nombre":"Gel de Limpieza",
+        "precio":4500,
+        "cantidad":2,
+        "imagen":"prod2.jpg"
+
+    },
+    {
+        "id":3,
+        "nombre":"Contorno de Ojos",
+        "precio":8500,
+        "cantidad":12,
+        "imagen":"prod3.jpg"
+
+    },
+    {
+        "id":4,
+        "nombre":"Rimmel",
+        "precio":8900,
+        "cantidad":5,
+        "imagen":"prod4.jpg"
+
+    },
+    {
+        "id":5,
+        "nombre":"Mascara facial",
+        "precio":5700,
+        "cantidad":11,
+        "imagen":"prod5.jpg"
+
+    },
+    {
+        "id":6,
+        "nombre":"Corrector de ojeras",
+        "precio":2600,
+        "cantidad":8,
+        "imagen":"prod6.jpg"
+
+
+    },
+    {
+        "id":7,
+        "nombre":"Protector labial",
+        "precio":2700,
+        "cantidad":2,
+        "imagen":"prod7.jpg"
+
+    },
+    {
+        "id":8,
+        "nombre":"Crema corporal",
+        "precio":5200,
+        "cantidad":15,
+        "imagen":"prod8.jpg"
+
+    },
+    {
+        "id":9,
+        "nombre":"Gel reductor",
+        "precio":12000,
+        "cantidad":5,
+        "imagen":"prod9.jpg"
+
+    },
+    {
+        "id":10,
+        "nombre":"Exfoliante corporal",
+        "precio":4100,
+        "cantidad":3,
+        "imagen":"prod10.jpg"
+
+    },
+    {
+        "id":11,
+        "nombre":"Bronceador en crema",
+        "precio":2200,
+        "cantidad":10,
+        "imagen":"prod11.jpg"
+
+    },
+    {
+        "id":12,
+        "nombre":"Masajeador corporal",
+        "precio":14000,
+        "cantidad":2,
+        "imagen":"prod12.jpg"
+
+    },
+    {
+        "id":13,
+        "nombre":"Esmalte regular",
+        "precio":1100,
+        "cantidad":7,
+        "imagen":"prod13.jpg"
+
+    },
+    {
+        "id":14,
+        "nombre":"Crema fria",
+        "precio":3600,
+        "cantidad":8,
+        "imagen":"prod14.jpg"
+
+    },
+    {
+        "id":15,
+        "nombre":"Aceite corporal",
+        "precio":5400,
+        "cantidad":3,
+        "imagen":"prod15.jpg"
+
+    }
+]

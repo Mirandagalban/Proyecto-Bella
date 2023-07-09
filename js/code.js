@@ -148,6 +148,13 @@ console.log (alumnos)
 
 //storage
 localStorage.setItem("alumnos", JSON.stringify(alumnos))
+
+Swal.fire({
+    icon: 'success',
+    title: `${alumnoCreado.nombre } gracias por tu mensaje!`,
+    text: "A la brevedad nos comunicaremos con usted.",
+    confirmButtonText: 'cerrar',
+  })
 };
 
 const btnResgistro = document.querySelector (".btn-registro")

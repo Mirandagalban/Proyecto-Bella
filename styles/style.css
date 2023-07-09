@@ -350,6 +350,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: auto;
 }
 
 .btn-eliminar {
@@ -367,6 +368,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
+
 }
 
 .pocasUnidades {
@@ -377,4 +380,9 @@ a:hover {
 
 .muchasUnidades {
   display: none;
+}
+
+.parrafo-total {
+  padding-left: 50px;
+  font-size: larger;
 }

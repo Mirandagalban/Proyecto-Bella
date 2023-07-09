@@ -1,0 +1,51 @@
+[
+    {
+        "id": 0 ,
+        "imagen":"curso.jpg",
+        "nombre": "Hilos Cosmetologicos",
+        "precio": 17000 ,
+        "duracion": "5 semanas" ,
+        "tipo":"facial"
+    },
+    {
+        "id": 1,
+        "imagen":"curso2.jpg",
+        "nombre": "Masajes Corporales",
+        "precio": 12000,
+        "duracion": "4 semanas",
+        "tipo":"corporal"
+    },
+    {
+        "id":2 ,
+        "imagen": "curso3.jpg",
+        "nombre":"Dermapen",
+        "precio": 20000 ,
+        "duracion": "6 semanas",
+        "tipo":"facial"
+    },
+    {
+        "id":3 ,
+        "imagen":"curso4.jpg",
+        "nombre":"Mini HIFU",
+        "precio": 17000,
+        "duracion": "5 semanas" ,
+        "tipo":"facial"
+    },
+    {
+        "id": 4,
+        "imagen":"curso5.jpg",
+        "nombre":"Depilación Láser",
+        "precio":15000 ,
+        "duracion":"4 semanas" ,
+        "tipo":"corporal y facial"
+    },
+    {
+        "id": 5,
+        "imagen": "curso6.jpg",
+        "nombre":"Maderoterapia",
+        "precio":12000 ,
+        "duracion": "4 semanas",
+        "tipo":"corporal"
+    }
+]
+
