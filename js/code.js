@@ -130,8 +130,8 @@ if (localStorage.getItem("alumnos")){
     console.log (alumnos)
 } else {
     console.log ("Bienvenido nuevo/a alumno")
-    alumnos.push(new Alumno ("Miranda", "Galban", "mirandagalbanbjj@gmail.com", "Maderoterapia"))
-    localStorage.setItem("alumnos", JSON.stringify(alumnos))
+    // alumnos.push(new Alumno ("Miranda", "Galban", "mirandagalbanbjj@gmail.com", "Maderoterapia"))
+    // localStorage.setItem("alumnos", JSON.stringify(alumnos))
 }
 
 console.log (alumnos)
@@ -161,3 +161,21 @@ const btnResgistro = document.querySelector (".btn-registro")
 
 btnResgistro.addEventListener("click", guardarAlumnos)
 
+//lista alumnos
+let listaAsync = document.getElementById("container-alumnos")
+
+const mostrarAlumnos= async ()=> {
+const resp = await fetch('https://jsonplaceholder.typicode.com/users')
+const listaAlumnos = await resp.json()
+listaAlumnos.forEach((alumno) => {
+    const div= document.createElement("div")
+    div.setAttribute= ("class", "listado-alumnos")
+    div.innerHTML= `
+                 <h5> Nombre: ${alumno.name}</h5>
+                 <p> Si queres su opinion podes escribirle a su email: ${alumno.email}</p> `
+
+    listaAsync.appendChild(div)
+    })
+}
+
+mostrarAlumnos()
